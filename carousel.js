@@ -38,3 +38,34 @@ window.onload = function () {
   // Викликаємо функцію для початкової настройки видимості блоків
   updateVisibleBlocks();
 };
+
+
+//mobile
+
+document.addEventListener("DOMContentLoaded", function () {
+  const prevBtnMob = document.querySelector(".prev-mob");
+  const nextBtnMob = document.querySelector(".next-mob");
+  const videoBlocksMob = document.querySelectorAll(".video_block-mob");
+  let currentSlideMob = 0;
+
+  function showSlideMob(n) {
+    videoBlocksMob.forEach(function (block) {
+      block.style.display = "none";
+    });
+    videoBlocksMob[n].style.display = "block";
+  }
+
+  function nextSlideMob() {
+    currentSlideMob = (currentSlideMob + 1) % videoBlocksMob.length;
+    showSlideMob(currentSlideMob);
+  }
+
+  function prevSlideMob() {
+    currentSlideMob =
+      (currentSlideMob - 1 + videoBlocksMob.length) % videoBlocksMob.length;
+    showSlideMob(currentSlideMob);
+  }
+
+  nextBtnMob.addEventListener("click", nextSlideMob);
+  prevBtnMob.addEventListener("click", prevSlideMob);
+});
