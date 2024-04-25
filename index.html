@@ -4,28 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MAXQuantumAI</title>
+      <link rel="icon" href="./img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
+
     <header>
+      <div class="header container">
       <div class="logo">
-        <img src="./img/max.svg" alt="MAX" srcset="" /><img
-          src="./img/QuantumAI.svg"
-          alt="Quantum"
-          srcset=""
-        />
+        <img class="logo-img" src="./img/logo.png" alt="MAX" srcset="" />
+              </div>
+            <div class="text-header" onclick="scrollToTarget()"><p>Crear una cuenta</p></div>
+
       </div>
     </header>
-    <div class="text"><p>Crear una cuenta</p></div>
 
-    <section class="phone">
+
+    <section class="phone container">
       <div class="phone_first">
         <div class="description">
           <img src="./img/MAXQuantumAI.svg" alt="" srcset="" />
-          <h3 class="title_phone">Inversión inteligente que</h3>
-          <p class="sum_phone">6288€</p>
-          <p class="desc_phone">en 5 horas y cura la pobreza</p>
-          <button type="submit">Consiga empezar</button><br />
-          <img src="./img/YoutubePlayer.png" alt="player" srcset="" />
+          <h1 class="title_phone">Inversión inteligente que</h1>
+          <div class="text-phone">
+                   <p class="desc_phone"><span class="sum_phone">6288€</span>
+ en 5 horas y cura la pobreza</p>
+         </div>
+
+          <button class="button-phone" type="submit" onclick="scrollToTarget()">Consiga empezar</button><br />
+
+          <img class="video-first" src="./img/YoutubePlayer.png" alt="player" srcset="" />
         </div>
         <div class="phone_img">
           <img src="./img/phone.svg" alt="" srcset="" />
@@ -36,13 +43,16 @@
       </div>
     </section>
 
-    <section class="group">
-      <h5 class="title">Socios</h5>
+    <section class="group container">
+      <h2 class="title">Socios</h2>
       <img src="./img/group2.svg" alt="" srcset="" />
     </section>
 
-    <section class="problema">
-      <h5 class="title">Problema</h5>
+    <div class="bckg-grin">
+            <div class="bckg-grin-r">
+    <section class="problema container">
+
+      <h2 class="title">Problema</h2>
       <div class="problema_group">
         <img src="./img/problema1.svg" alt="problema" srcset="" />
         <img src="./img/problema2.svg" alt="problema" srcset="" />
@@ -50,9 +60,10 @@
         <img src="./img/problema4.svg" alt="" srcset="" />
       </div>
     </section>
-    <section class="solution">
+
+    <section class="solution container">
       <div class="about_solution">
-        <h5 class="title">SOLUCIÓN</h5>
+        <h2 class="title">SOLUCIÓN</h2>
         <p class="text">
           Utilizando el poder de la Computación Cuántica, puedes ayudarnos a
           acabar con la exclusividad del 1% más rico y resolver 4 grandes
@@ -61,77 +72,176 @@
           más ricos), ¡y ayudarte a hacer realidad tus sueños financieros!
         </p>
       </div>
-      <div class="number">
+      </div>
+          </div>
+      <div class="number container">
         <img src="./img/number.svg" alt="number" srcset="" />
         <img src="./img/GroupNumber.svg" alt="" srcset="" />
       </div>
     </section>
 
-    <section class="video">
+    <section class="video container">
+      <div class="video-carousel">
       <div class="video_block">
-        <img src="./img/YoutubePlayer.png" alt="video" srcset="" />
-        <p class="desc_video">Saldo actual: <b>€ 6620</b></p>
+        <img class="video-img" src="./img/YoutubePlayer.png" alt="video" srcset="" />
+        <p class="desc_video">Saldo actual:  &nbsp; <b>€ 6620</b></p>
       </div>
       <div class="video_block">
-        <img src="./img/YoutubePlayer.png" alt="video" srcset="" />
-        <p class="desc_video">Saldo actual: <b>€ 980</b></p>
+        <img class="video-img" src="./img/YoutubePlayer.png" alt="video" srcset="" />
+        <p class="desc_video">Saldo actual: &nbsp; <b>€ 980</b></p>
       </div>
 
       <div class="video_block">
-        <img src="./img/YoutubePlayer.png" alt="video" srcset="" />
-        <p class="desc_video">Saldo actual: <b>€ 520</b></p>
+        <img class="video-img" src="./img/YoutubePlayer.png" alt="video" srcset="" />
+        <p class="desc_video">Saldo actual: &nbsp; <b>€ 520</b></p>
       </div>
+
+
+
+
+                  <div class="video_block">
+        <img class="video-img" src="./img/YoutubePlayer.png" alt="video" srcset="" />
+        <p class="desc_video">Saldo actual:  &nbsp; <b>€ 9520</b></p>
+      </div>
+            <div class="video_block">
+        <img class="video-img" src="./img/YoutubePlayer.png" alt="video" srcset="" />
+        <p class="desc_video">Saldo actual:  &nbsp; <b>€ 15230</b></p>
+      </div>
+            <div class="video_block">
+        <img class="video-img" src="./img/YoutubePlayer.png" alt="video" srcset="" />
+        <p class="desc_video">Saldo actual:  &nbsp; <b>€ 5320</b></p>
+      </div>
+            <div class="video_block">
+        <img class="video-img" src="./img/YoutubePlayer.png" alt="video" srcset="" />
+        <p class="desc_video">Saldo actual:  &nbsp; <b>€ 2520</b></p>
+      </div>
+            </div>
+            
       <div class="arr">
-        <img src="./img/arrowLeft.svg" alt="" srcset="" />
-        <img src="./img/arrowRight.svg" alt="" srcset="" />
+  <img class="prev" src="./img/arrowLeft.svg" alt="Prev" />
+  <img class="next" src="./img/arrowRight.svg" alt="Next" />
       </div>
+
     </section>
 
-    <section class="means">
-      <h5 class="title">opiniones sobre la informática cuántica</h5>
+
+
+
+
+
+
+    <section class="means container">
+      <h2 class="title">opiniones sobre la informática cuántica</h2>
     <img src="./img/man1.svg" alt="" srcset="">
         <img src="./img/man2.svg" alt="" srcset="">
     </section>
 
     <section class="faq">
+<div class="faq-text container">
+      <h2 class="title">faq</h2>
 
 
+<div class="accordion">
+
+  <div class="accordion-item">
+    <div class="accordion-header" onclick="toggleAccordion(this)">¿Qué es MAXQuantumAI?<span class="arrow-svg-bottom"><img src="./img/arrFaqTop.svg" alt="" srcset=""></span><span class="arrow-svg-top active"><img src="./img/arrFaqBt.svg" alt="" srcset=""></span></div>
+       <hr>
+    <div class="accordion-content">MAXQuantumAI es pionera en máquinas de computación cuántica. Aprovechando esta tecnología de vanguardia, la máquina de computación cuántica le permite ejecutar operaciones astutas, desbloqueando ganancias financieras sin precedentes. ¡Además, está diseñado para permitirle generar ingresos, ayudar a los demás, y producir beneficios al mismo tiempo!</div>
+  </div>
+
+  <div class="accordion-item">
+    <div class="accordion-header">¿Cuánto puedo ganar al día?<span class="arrow-svg-bottom"><img src="./img/arrFaqTop.svg" alt="" srcset=""></span><span class="arrow-svg-top active"><img src="./img/arrFaqBt.svg" alt="" srcset=""></span></div>
+    <hr>
+    <div class="accordion-content">Actualmente, los usuarios del programa MAXQuantumAI están ganando entre 1.000 y 5.000 euros diarios, lo que se traduce en entre 5.000 y 25.000 euros semanales.</div>
+  </div>
+    <div class="accordion-item">
+    <div class="accordion-header">¿Qué experiencia y formación necesito para trabajar con MAXQuantumAI?<span class="arrow-svg-bottom"><img src="./img/arrFaqTop.svg" alt="" srcset=""></span><span class="arrow-svg-top active"><img src="./img/arrFaqBt.svg" alt="" srcset=""></span></div>
+       <hr>
+    <div class="accordion-content">No se requiere experiencia previa ni formación especializada. Utilizar el programa es tan sencillo como registrar un correo electrónico o iniciar sesión en una cuenta de Facebook.</div>
+  </div>
+    <div class="accordion-item">
+    <div class="accordion-header">¿Cuánto costará utilizar el sistema automatizado MAXQuantumAI?<span class="arrow-svg-bottom"><img src="./img/arrFaqTop.svg" alt="" srcset=""></span><span class="arrow-svg-top active"><img src="./img/arrFaqBt.svg" alt="" srcset=""></span></div>
+       <hr>
+    <div class="accordion-content">El precio dependerá de los costes actuales y del alcance de la aplicación tecnológica, aunque las 1.000 plazas iniciales serán gratuitas, invitando a los usuarios a colaborar en las pruebas mientras obtienen ingresos. Posteriormente, los usuarios habituales tendrán que pagar una cuota mensual de 10.000 euros, y las empresas que deseen integrar MAXQuantumAI tendrán que pagar una cuota diez veces superior.</div>
+  </div>
+    <div class="accordion-item">
+    <div class="accordion-header">¿Desde qué país puedo trabajar con este programa?<span class="arrow-svg-bottom"><img src="./img/arrFaqTop.svg" alt="" srcset=""></span><span class="arrow-svg-top active"><img src="./img/arrFaqBt.svg" alt="" srcset=""></span></div>
+       <hr>
+    <div class="accordion-content">Por el momento, ¡exclusivo para residentes españoles! La belleza de este programa reside en su accesibilidad desde cualquier lugar del Reino Unido. Mientras tengas conexión a Internet, el programa genera ganancias de forma constante, incluso cuando estás en movimiento.</div>
+  </div>
+    <div class="accordion-item">
+    <div class="accordion-header">¿Cuánto tardará en transferirse el beneficio a mi cuenta?<span class="arrow-svg-bottom"><img src="./img/arrFaqTop.svg" alt="" srcset=""></span><span class="arrow-svg-top active"><img src="./img/arrFaqBt.svg" alt="" srcset=""></span></div>
+       <hr>
+    <div class="accordion-content">MAXQuantumAI facilita transferencias de beneficios rápidas, normalmente acreditadas en 10-15 minutos gracias a nuestra colaboración a nivel corporativo con la mayoría de los bancos. En casos excepcionales, especialmente si se encuentra en el extranjero, la transferencia puede tardar un día más.</div>
+  </div>
+    <div class="accordion-item">
+    <div class="accordion-header">¿Alguno de los usuarios de MAXQuantumAI ha perdido realmente sus inversiones?<span class="arrow-svg-bottom"><img src="./img/arrFaqTop.svg" alt="" srcset=""></span><span class="arrow-svg-top active"><img src="./img/arrFaqBt.svg" alt="" srcset=""></span></div>
+       <hr>
+    <div class="accordion-content">MAXQuantumAI cuenta con un historial impecable, en el que ningún usuario ha experimentado pérdidas superiores a su inversión inicial. Incluso los casos más difíciles han resultado rentables al final.</div>
+  </div>
+    <div class="accordion-item">
+    <div class="accordion-header">¿Cómo empezar a trabajar con el programa MAXQuantumAI?<span class="arrow-svg-bottom"><img src="./img/arrFaqTop.svg" alt="" srcset=""></span><span class="arrow-svg-top active"><img src="./img/arrFaqBt.svg" alt="" srcset=""></span></div>
+       <hr>
+    <div class="accordion-content">Para iniciar el proceso es necesario rellenar datos esenciales como el nombre, los apellidos, la dirección de correo electrónico y el número de teléfono. Una vez enviado el formulario, accederás al panel de MAXQuantumAI. En 24 horas recibirá una llamada de su gestor personal, que le guiará a través de los procedimientos de financiación y configuración.</div>
+  </div>
+
+
+
+
+</div>
     </section>
-
-    <section class="about-us">
-              <h5 class="title">QUÉ HACE QUE LA COMPUTACIÓN CUÁNTICA SEA TAN BUENA PARA INVERTIR</h5>
+<div class="bckf-faq">
+    <section class="about-us container">
+              <h2 class="title">QUÉ HACE QUE LA COMPUTACIÓN CUÁNTICA SEA TAN BUENA PARA INVERTIR</h2>
 <div class="text_img">
     <p class="about-us_text">
         Se trata de la primera máquina de computación cuántica del mundo; a diferencia de tu PC doméstico, este ordenador es inteligente: toma miles de "decisiones" simultáneas a la vez. Tu cerebro piensa de uno en uno, en una secuencia. Imagínese que pudiera tener miles de pensamientos a la vez, cada uno tan claro como el otro. Eso es la computación cuántica.
-<br><br>
+    <br><br>
 Encuentra operaciones analizando los diferenciales entre los precios de las acciones cada nanosegundo que los mercados bursátiles están vivos (y hace predicciones incluso cuando los mercados están cerrados, para que usted sepa lo que es probable que suceda cuando vuelvan a abrir). Su ordenador actual (y el de todo el mundo) no puede igualar la velocidad de decisión de este nuevo sistema.
-<br><br>  
+    <br><br>  
 Utilizando esa potencia, nuestra máquina de computación cuántica le ayudará a realizar operaciones más inteligentes y a ganar más dinero del que creía posible. Y lo que es mejor, ¡está diseñada para que usted pueda ganar dinero y ayudar a los demás mientras se beneficia!  
-</p>
+    </p>
 <div class="about-us_img">
     <img src="./img/imageAbout1.svg" alt="" srcset="">
         <img src="./img/imageAbout2.svg" alt="" srcset="">
 </div>
 </div>
     </section>
+</div>
 
-    <section class="form_img">
-        <form action="">
-            <title>INSCRÍBETE</title>
+<div class="bckg-form">
+    <section class="container" id="targetBlock">
+        <h3 class="title-litle">Inscríbase y sea uno de los pocos usuarios exclusivos de esta tecnología</h3>
+        <div class="container-form">
+          <div class="form">
+        <form action="/server" method="post">
+            <h2 class="title">INSCRÍBETE</h2>
             <input type="text" placeholder="Nombre"><br>
                     <input type="text" placeholder="Apellido"><br>
        <input type="email" name="" id="" placeholder="E-mail"><br>
-       <input type="tel" name="" id="" placeholder="E-mail"><br>
-       <button type="button">Regístrese en</button>
+       <input type="tel" name="" id="" placeholder="Teléfono"><br>
+       <button class="button" type="submit">Regístrese en</button>
+       </div>
                 </form>
         <img src="./img/form.svg" alt="" class="form_img_right">
+        </div>
     </section>
+
+
+      </div>
     <footer>
+
+      <div class="footer container">
 <p class="footer_text">Acerca de | Cómo funciona | Socios</p>
 <p class="footer_text">©  Todos los derechos reservados - MAXQuantumAI</p>    
 <p class="footer_text">Siga nuestro viaje:</p>
 <img src="./img/sotial.svg" alt="" srcset="">
-
+</div>
 </footer>
+
+
+  
+<script src="index.js"></script>
+<script src="carousel.js"></script>
   </body>
 </html>
