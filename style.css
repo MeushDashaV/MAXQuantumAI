@@ -19,6 +19,8 @@ img {
   --color-bckf-circle: #c3f7bd;
 }
 
+
+
 .container {
   max-width: 1170px;
   margin: 0 auto;
@@ -108,8 +110,7 @@ img {
 }
 
 .video-first {
-  height: 265px;
-  width: 470px;
+border-radius: 10px;
 }
 
 .phone_sec {
@@ -526,15 +527,29 @@ footer {
 .bckg-form:before {
   content: '';
   position: absolute;
-
-  width: 170px; /* Ширина кульки */
-  height: 170px; /* Висота кульки */
-  background-image: url(./img/Vector-grin-problema.svg); /* Ваше фонове зображення */
+  width: 200px; 
+  height: 200px;
+  background-image: url(./img/Vector-grin-problema.svg); 
   background-repeat: no-repeat;
-  background-size: contain; /* Розмір зображення відповідає об'єктові */
-  animation: moveBall 5s infinite alternate; /* Анімація руху */
-  transform: translate(-50%, -50%); /* Центруємо кульку */
-  z-index: -1; /* Поміщаємо фон позаду контенту */
+  background-size: contain; 
+  animation: moveBall2 7s infinite alternate-reverse; 
+  transform: translate(-50%, -50%);
+  z-index: -1; 
+}
+
+@keyframes moveBall2 {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  50% {
+    top: 150px;
+    left: 150px;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
 }
 
 
