@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 body {
-  max-width: 1920px;
+
   margin: 0;
 }
 
@@ -233,25 +233,36 @@ border-radius: 10px;
   gap: 31px;
   margin-bottom: 100px;
 }
+
+
 .video {
   margin: 0 auto;
   width: 1170px;
 }
 .video-carousel {
   display: flex;
-  justify-content: space-between;
   gap: 30px;
   margin: 0;
-
+  width: 100%;
   overflow: hidden;
-  transition: transform 0.3s ease;
 }
 
+
+
 .video_block {
-  display: flex;
+ /* display: flex;*/
+  flex: 0 0 auto;
+  width: 370px;
+  display: none;
   flex-direction: column;
   align-items: center;
   margin-bottom: 40px;
+
+
+}
+
+.video_block.show {
+  display: flex;
 }
 
 .arr {

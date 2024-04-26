@@ -49,3 +49,27 @@ function scrollToTarget() {
   // Прокрутка сторінки до цільового блоку
   targetBlock.scrollIntoView({ behavior: "smooth" });
 }
+
+
+
+
+
+
+
+
+   const videoBlocks = document.querySelectorAll(".video_block");
+   let currentIndex = 0;
+
+   const showVideo = (index) => {
+     videoBlocks.forEach((block) => block.classList.remove("show"));
+     videoBlocks[index].classList.add("show");
+   };
+
+   const autoplayCarousel = () => {
+     setInterval(() => {
+       currentIndex = (currentIndex + 1) % videoBlocks.length;
+       showVideo(currentIndex);
+     }, 5000); // Кожні 5 секунд
+   };
+
+   autoplayCarousel();
