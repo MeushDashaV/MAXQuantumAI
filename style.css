@@ -815,19 +815,9 @@ text-align: center;
 
 
 
-/*mob*/
-.video-carousel-mob {
-  display: flex;
-  overflow-x: hidden;
+.animation-num {
+  display: none;
 }
-
-.video_block-mob {
-  flex: 0 0 100%;
-  transition: transform 0.5s ease;
-}
-
-
-
 
 /*mob*/
 
