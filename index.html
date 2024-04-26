@@ -367,35 +367,38 @@ Utilizando esa potencia, nuestra máquina de computación cuántica le ayudará 
 
     //number
   // Отримуємо посилання на елемент, який потрібно анімувати
-  const numElement = document.getElementById('animatedNum');
-  const targetValue = 30540; // Значення, яке ми хочемо досягти
-  const duration = 10000; // Тривалість анімації в мілісекундах
-  const step = duration / targetValue; // Крок анімації
+const numElement = document.getElementById('animatedNum');
+const targetValue = 30540; // Значення, яке ми хочемо досягти
+const duration = 10000; // Тривалість анімації в мілісекундах
+const step = duration / (targetValue - 0); // Крок анімації
 
-  // Запускаємо анімацію
-  animateValue(numElement, 0, targetValue, duration);
+// Запускаємо анімацію
+animateValue(numElement, 0, targetValue, duration);
 
-  // Функція для анімації значення
-  function animateValue(element, start, end, duration) {
-    let startTimestamp = null;
+// Функція для анімації значення
+function animateValue(element, start, end, duration) {
+  let startTimestamp = null;
 
-    function step(timestamp) {
-      if (!startTimestamp) startTimestamp = timestamp;
-      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-      element.textContent = formatNumber(start + progress * (end - start));
+  function step(timestamp) {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+    element.textContent = formatNumber(parseInt(start + progress * (end - start)));
 
-      if (progress < 1) {
-        window.requestAnimationFrame(step);
-      }
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
     }
-
-    window.requestAnimationFrame(step);
   }
 
-  // Функція для форматування чисел з розділенням груп
-  function formatNumber(num) {
-    return num.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
-  }
+  window.requestAnimationFrame(step);
+}
+
+// Функція для форматування чисел з розділенням груп
+function formatNumber(num) {
+  return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+
+
 </script>
   </body>
 </html>
