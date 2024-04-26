@@ -69,30 +69,56 @@ window.onload = function () {
 
 //mobile
 
-document.addEventListener("DOMContentLoaded", function () {
-  const prevBtnMob = document.querySelector(".prev-mob");
-  const nextBtnMob = document.querySelector(".next-mob");
-  const videoBlocksMob = document.querySelectorAll(".video_block-mob");
-  let currentSlideMob = 0;
+window.onload = function () {
+  const videoBlocks = document.querySelectorAll(".video_block-mob");
+  const prevButton = document.querySelector(".prev-mob");
+  const nextButton = document.querySelector(".next-mob");
+  let currentIndex = 0;
 
-  function showSlideMob(n) {
-    videoBlocksMob.forEach(function (block) {
-      block.style.display = "none";
-    });
-    videoBlocksMob[n].style.display = "block";
+  function moveLeft() {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateCarousel();
+    } else {
+      currentIndex = videoBlocks.length - 1;
+      updateCarousel();
+    }
   }
 
-  function nextSlideMob() {
-    currentSlideMob = (currentSlideMob + 1) % videoBlocksMob.length;
-    showSlideMob(currentSlideMob);
+  function moveRight() {
+    if (currentIndex < videoBlocks.length - 1) {
+      currentIndex++;
+      updateCarousel();
+    } else {
+      currentIndex = 0;
+      updateCarousel();
+    }
   }
 
-  function prevSlideMob() {
-    currentSlideMob =
-      (currentSlideMob - 1 + videoBlocksMob.length) % videoBlocksMob.length;
-    showSlideMob(currentSlideMob);
-  }
+ function updateCarousel() {
+   const offset = -currentIndex * videoBlocks[0].offsetWidth;
+   document.querySelector(
+     ".video-carousel-mob"
+   ).style.transform = `translateX(${offset}px)`;
 
-  nextBtnMob.addEventListener("click", nextSlideMob);
-  prevBtnMob.addEventListener("click", prevSlideMob);
-});
+   // Показати лише поточне відео та приховати інші
+   videoBlocks.forEach((block, index) => {
+     if (index === currentIndex) {
+       block.classList.add("show");
+       block.classList.remove("hide");
+     } else {
+       block.classList.remove("show");
+       block.classList.add("hide");
+     }
+   });
+ }
+
+
+  prevButton.addEventListener("click", moveLeft);
+  nextButton.addEventListener("click", moveRight);
+
+  // Виклик функції оновлення для першого запуску
+  updateCarousel();
+};
+
+

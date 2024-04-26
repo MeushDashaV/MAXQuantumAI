@@ -32,7 +32,7 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
+z-index: 100;
     position: absolute;
   top: 175px; /* Встановлюємо відстань від верхнього краю */
   left: 850px; /* Встановлюємо відстань від правого краю */
@@ -802,36 +802,60 @@ text-align: center;
     display: none;
 }
 
-.video-mob {
-    display: block;
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*mob*/
+.video-carousel-mob {
+  display: flex;
+  overflow-x: hidden;
+}
+
+.video_block-mob {
+  flex: 0 0 100%;
+  transition: transform 0.5s ease;
 }
 
 
 
 
+/*mob*/
 
 
- .video-carousel-mob {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-  }
 
+.video-mob {
+  display: block;
+}
 
-  .video-img-mob {
-width: 320px;
-height: 180px;
-  }
+.video-carousel-mob {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
 
-  .video_block-mob {
-    display: block;
-    text-align: center;
-  }
+.video-img {
+  width: 320px;
+  height: 180px;
+}
 
-  .video_block-mob:first-child {
-    display: block;
+.video_block-mob {
+  display: block;
+  text-align: center;
+}
 
-  }
+.video_block-mob:first-child {
+  display: block;
+}
 
 .desc_video-mob {
   width: 230px;
@@ -849,35 +873,40 @@ height: 180px;
   margin-top: -5px;
 }
 
-  .arr-mob {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 0 10px;
-    box-sizing: border-box;
-    margin-top: 20px;
-  }
+.arr-mob {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
 
-  .arr-mob img {
-    cursor: pointer;
-    width: 50px;
-    height: auto;
-  }
+.arr-mob img {
+  cursor: pointer;
+  width: 50px;
+  height: auto;
+}
 
-  .prev-mob {
-    position: relative;
-    left: 0;
-  }
+.prev-mob {
+  position: relative;
+  left: 0;
+}
 
-  .next-mob {
-    position: relative;
-    right: 0;
-  }
+.next-mob {
+  position: relative;
+  right: 0;
+}
+
 
 
 .container {
     width: 350px;
+}
+
+.hide {
+  display: none;
 }
 }
