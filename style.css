@@ -19,6 +19,43 @@ img {
   --color-bckf-circle: #c3f7bd;
 }
 
+.currency {
+  font-size: larger; /* Збільшуємо розмір шрифту для літери € */
+}
+
+
+.animation-num {
+  width: 200px;
+  height: 20px;
+  background-color: #fff;
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+    position: absolute;
+  top: 175px; /* Встановлюємо відстань від верхнього краю */
+  left: 850px; /* Встановлюємо відстань від правого краю */
+}
+
+
+.phone {
+  position: relative;
+}
+
+
+
+
+.num {
+    font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.color-num {
+  color: rgba(176, 175, 176, 1);
+}
+
 
 
 .container {

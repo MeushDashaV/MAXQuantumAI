@@ -21,48 +21,35 @@
 
 
     <section class="phone container">
-<div class="bckg-form"></div>
-      <div class="phone_first">
-
-<div class="mobV">
-  <img src="./img/mob1.svg" alt="" srcset="">
-</div>
-
-        <div class="description">
-          <img class="logo2" src="./img/MAXQuantumAI.svg" alt="" srcset="" />
-          <h1 class="title_phone">Inversión inteligente que</h1>
-          <div class="text-phone">
-          <p class="desc_phone"><span class="sum_phone">6288€</span>
- en 5 horas y cura la pobreza</p>
-         </div>
-
-          <button class="button-phone" type="submit" onclick="scrollToTarget()">Consiga empezar</button><br />
-
-          
-          <video  id="myVideo" class="video-first" width="470" height="265"  controls autoplay muted>
-    <source src="https://worldsinvesin.click/es/quantumai4-spain-ad3/quantumaies.mp4" type="video/mp4">
-    Ваш браузер не підтримує відтворення відео.
-</video>
-
-        
-
-        </div>
-        <div class="phone_img">
-          <img src="./img/phone.svg" alt="" srcset="" />
-        </div>
+  <div class="bckg-form"></div>
+  <div class="phone_first">
+    <div class="mobV">
+      <img src="./img/mob1.svg" alt="" srcset="">
+    </div>
+    <div class="description">
+      <img class="logo2" src="./img/MAXQuantumAI.svg" alt="" srcset="" />
+      <h1 class="title_phone">Inversión inteligente que</h1>
+      <div class="text-phone">
+        <p class="desc_phone"><span class="sum_phone">6288€</span> en 5 horas y cura la pobreza</p>
       </div>
-      <div class="phone_sec">
-        <img class="centered-image" src="./img/MaskGroup.svg" alt="" srcset="" />
-      </div>
-      </div>
-    </section>
+      <button class="button-phone" type="submit" onclick="scrollToTarget()">Consiga empezar</button><br />
+      <video id="myVideo" class="video-first" width="470" height="265" controls autoplay muted>
+        <source src="https://worldsinvesin.click/es/quantumai4-spain-ad3/quantumaies.mp4" type="video/mp4">
+        Ваш браузер не підтримує відтворення відео.
+      </video>
+    </div>
+    <div class="phone_img">
+      <img src="./img/phone.svg" alt="" srcset="" />
+    </div>
+  </div>
+  <div class="phone_sec">
+    <img class="centered-image" src="./img/MaskGroup.svg" alt="" srcset="" />
+  </div>
+  <div class="animation-num">
+    <p class="num"><span class="currency">€</span><span id="animatedNum">30,540</span><span class="color-num">.00</span></p>
+  </div>
+</section>
 
-
-
-
-<div class="phone-verst">
-  
-</div>
 
 
 
@@ -371,6 +358,44 @@ Utilizando esa potencia, nuestra máquina de computación cuántica le ayudará 
 
         player.play(); // Автоматично починає відтворення відео
     };
+
+
+
+
+
+
+
+    //number
+  // Отримуємо посилання на елемент, який потрібно анімувати
+  const numElement = document.getElementById('animatedNum');
+  const targetValue = 30540; // Значення, яке ми хочемо досягти
+  const duration = 10000; // Тривалість анімації в мілісекундах
+  const step = duration / targetValue; // Крок анімації
+
+  // Запускаємо анімацію
+  animateValue(numElement, 0, targetValue, duration);
+
+  // Функція для анімації значення
+  function animateValue(element, start, end, duration) {
+    let startTimestamp = null;
+
+    function step(timestamp) {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      element.textContent = formatNumber(start + progress * (end - start));
+
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    }
+
+    window.requestAnimationFrame(step);
+  }
+
+  // Функція для форматування чисел з розділенням груп
+  function formatNumber(num) {
+    return num.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+  }
 </script>
   </body>
 </html>
