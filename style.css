@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 body {
-
+  box-sizing: border-box;
   margin: 0;
+  overflow-x: hidden;
 }
 
 p {
@@ -23,31 +24,26 @@ img {
   font-size: larger; /* Збільшуємо розмір шрифту для літери € */
 }
 
-
 .animation-num {
   width: 200px;
   height: 20px;
   background-color: #fff;
-    position: absolute;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-z-index: 100;
-    position: absolute;
+  z-index: 100;
+  position: absolute;
   top: 175px; /* Встановлюємо відстань від верхнього краю */
   left: 850px; /* Встановлюємо відстань від правого краю */
 }
-
 
 .phone {
   position: relative;
 }
 
-
-
-
 .num {
-    font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 20px;
 }
@@ -56,12 +52,9 @@ z-index: 100;
   color: rgba(176, 175, 176, 1);
 }
 
-
-
 .container {
   max-width: 1170px;
   margin: 0 auto;
-  
 }
 
 .header {
@@ -148,7 +141,7 @@ z-index: 100;
 }
 
 .video-first {
-border-radius: 10px;
+  border-radius: 10px;
 }
 
 .phone_sec {
@@ -199,20 +192,13 @@ border-radius: 10px;
 }
 */
 
-
-
-
-
-
-
 .bckg-grin {
   position: relative;
-  
 }
 
 .bckg-grin:before {
   z-index: -1;
-  content: '';
+  content: "";
   position: absolute;
   width: 540px;
   height: 540px;
@@ -249,13 +235,6 @@ border-radius: 10px;
   }
 }
 
-
-
-
-
-
-
-
 .text {
   margin-top: 40px;
   margin-bottom: 50px;
@@ -273,7 +252,6 @@ border-radius: 10px;
   margin-bottom: 100px;
 }
 
-
 .video {
   margin: 0 auto;
   width: 1170px;
@@ -286,18 +264,14 @@ border-radius: 10px;
   overflow: hidden;
 }
 
-
-
 .video_block {
- /* display: flex;*/
+  /* display: flex;*/
   flex: 0 0 auto;
   width: 370px;
   display: none;
   flex-direction: column;
   align-items: center;
   margin-bottom: 40px;
-
-
 }
 
 .video_block.show {
@@ -355,16 +329,13 @@ hr {
   margin-bottom: 30px;
 }
 
-
-
-
 .accordion-content {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 29px;
   margin-bottom: 30px;
-max-height: 0;
+  max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease; /* Додано перехід */
 }
@@ -373,8 +344,6 @@ max-height: 0;
   display: block;
   max-height: 1000px; /* Початкове значення для анімації */
 }
-
-
 
 .accordion-header {
   cursor: pointer;
@@ -386,8 +355,6 @@ max-height: 0;
   display: flex;
   justify-content: space-between;
 }
-
-
 
 .arrow-svg-top,
 .arrow-svg-bottom {
@@ -510,20 +477,13 @@ footer {
   align-items: center;
 }
 
-
-
-
-
-
-
-
 .bckf-faq {
   position: relative;
 }
 
-.bckf-faq:before  {
+.bckf-faq:before {
   z-index: -1;
-  content: '';
+  content: "";
   position: absolute;
   width: 540px;
   height: 540px;
@@ -560,37 +520,25 @@ footer {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
 .bckg-form {
   position: relative;
 }
 
 .bckg-form:before {
-  content: '';
+  content: "";
   position: absolute;
-  width: 200px; 
+  width: 200px;
   height: 200px;
-  background-image: url(./img/Vector-grin-problema.svg); 
+  background-image: url(./img/Vector-grin-problema.svg);
   background-repeat: no-repeat;
-  background-size: contain; 
-  animation: moveBall2 7s infinite alternate-reverse; 
+  background-size: contain;
+  animation: moveBall2 7s infinite alternate-reverse;
   transform: translate(-50%, -50%);
-  z-index: -1; 
+  z-index: -1;
 }
 .group2 {
   display: none;
 }
-
-
 
 @keyframes moveBall2 {
   0% {
@@ -607,13 +555,6 @@ footer {
   }
 }
 
-
-
-
-
-
-
-
 .mobV {
   display: none;
 }
@@ -623,25 +564,22 @@ footer {
 }
 
 .group-man-mob {
-    display: none;
+  display: none;
 }
 
-
 .video-mob {
-    display: none;
+  display: none;
 }
 
 @media (min-width: 360px) and (max-width: 720px) {
+  .group2 {
+    display: block;
+    margin-bottom: -150px;
+  }
 
-.group2 {
-  display: block;
-  margin-bottom: -150px;
-}
-
-.centered-image {
-  width: 350px;
-}
-
+  .centered-image {
+    width: 350px;
+  }
 
   .header {
     width: 360px;
@@ -670,9 +608,6 @@ footer {
   .desc_phone {
     display: none;
   }
-
-
-
 
   .phone_first {
     display: flex;
@@ -706,7 +641,6 @@ footer {
     align-items: center;
     margin-bottom: 50px;
   }
-
 
   .title {
     font-size: 24px;
@@ -751,186 +685,166 @@ footer {
   }
 
   .group-man-mob {
-        display: flex;
+    display: flex;
     flex-direction: column;
     gap: 20px;
-
   }
 
   .faq-text {
     width: 100%;
   }
-.accordion-header {
+  .accordion-header {
     font-size: 14px;
     line-height: 17.7px;
-}
-.accordion-content {
-        font-size: 14px;
+  }
+  .accordion-content {
+    font-size: 14px;
     line-height: 22px;
-}
-.text_img {
+  }
+  .text_img {
     display: flex;
     flex-direction: column;
     gap: 20px;
-}
+  }
 
-.about-us_text {
-            font-size: 14px;
+  .about-us_text {
+    font-size: 14px;
     line-height: 22px;
-}
+  }
 
-.form_img_right {
+  .form_img_right {
     display: none;
-}
+  }
 
-.form {
+  .form {
     text-align: center;
     padding-bottom: 30px;
     border-radius: 0 0 0 0;
-}
+  }
 
-input {
+  input {
     width: 320px;
     height: 48px;
-}
+  }
 
-.button {
+  .button {
     width: 320px;
     height: 60px;
     font-size: 24px;
-}
-footer {
+  }
+  footer {
     margin-top: 50px;
-}
+  }
 
-.footer_text {
-                font-size: 14px;
+  .footer_text {
+    font-size: 14px;
     line-height: 17.7px;
-text-align: center;
-}
+    text-align: center;
+  }
 
-.footer {
+  .footer {
     width: 273px;
-}
+  }
 
-.sotial {
+  .sotial {
     width: 205px;
-}
+  }
 
-.video {
+  .video {
     display: none;
-}
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-.animation-num {
-  display: none;
-}
-
-
-.bckg-grin {
+  .animation-num {
     display: none;
-}
-.bckg-grin-r {
+  }
+
+  .bckg-grin {
     display: none;
-}
-.bckf-faq {
+  }
+  .bckg-grin-r {
     display: none;
-}
+  }
+  .bckf-faq {
+    display: none;
+  }
 
+  .group {
+    display: none;
+  }
+  /*mob*/
 
-.group {
-  display: none;
-}
-/*mob*/
+  .video-mob {
+    display: block;
+  }
 
+  .video-carousel-mob {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
 
+  .video-img {
+    width: 320px;
+    height: 180px;
+  }
 
-.video-mob {
-  display: block;
-}
+  .video_block-mob {
+    display: block;
+    text-align: center;
+  }
 
-.video-carousel-mob {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
+  .video_block-mob:first-child {
+    display: block;
+  }
 
-.video-img {
-  width: 320px;
-  height: 180px;
-}
+  .desc_video-mob {
+    width: 230px;
+    height: 47px;
+    background-color: var(--color-bckg);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17.7px;
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: -5px;
+  }
 
-.video_block-mob {
-  display: block;
-  text-align: center;
-}
+  .arr-mob {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-top: 20px;
+  }
 
-.video_block-mob:first-child {
-  display: block;
-}
+  .arr-mob img {
+    cursor: pointer;
+    width: 50px;
+    height: auto;
+  }
 
-.desc_video-mob {
-  width: 230px;
-  height: 47px;
-  background-color: var(--color-bckg);
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17.7px;
-  border-radius: 0px 0px 10px 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  margin-top: -5px;
-}
+  .prev-mob {
+    position: relative;
+    left: 0;
+  }
 
-.arr-mob {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 0 10px;
-  box-sizing: border-box;
-  margin-top: 20px;
-}
+  .next-mob {
+    position: relative;
+    right: 0;
+  }
 
-.arr-mob img {
-  cursor: pointer;
-  width: 50px;
-  height: auto;
-}
-
-.prev-mob {
-  position: relative;
-  left: 0;
-}
-
-.next-mob {
-  position: relative;
-  right: 0;
-}
-
-
-
-.container {
+  .container {
     width: 350px;
-}
+  }
 
-.hide {
-  display: none;
-}
+  .hide {
+    display: none;
+  }
 }
